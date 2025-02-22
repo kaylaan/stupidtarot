@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (index < text.length) {
             typewriterElement.innerHTML += text.charAt(index);
             index++;
-            setTimeout(typeWriter, 200); // Adjust the speed by changing the timeout value
+            setTimeout(typeWriter, 80); // Adjust the speed by changing the timeout value
         }
     }
 
