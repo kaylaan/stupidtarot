@@ -19,6 +19,10 @@ let vibe = document.querySelector('#vibe')
 let noun;
 let verb;
 let adjective;
+let index=0;
+let user;
+let choice;
+let title = "#STUPiDTAROT"
 
 let cards = ["images/cards/blackoutdrunk.png", "images/cards/blackoutdrunk.png", "images/cards/blackoutdrunk.png"];
 let loveYes = [
