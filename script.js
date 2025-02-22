@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let user = ''
     let choice;
     let index = 0;
+
+    let love = document.querySelector('#love')
+    let career = document.querySelector('#career')
+    let vibe = document.querySelector('#vibe')
     
 
     // Function to create typewriter effect
@@ -36,9 +40,31 @@ document.addEventListener('DOMContentLoaded', function() {
     nextButton.addEventListener('click', function() {
         console.log(name.value);
         user = name.value;
+        name.style.display = 'none';
         nameQ.style.display = 'none';
         category.style.display = 'block';
     });
+
+    love.addEventListener('click', function() {
+        love.style.border = '4px solid rgb(205,89,140)'
+        career.style.border = '4px solid rgba(205,89,140,0)'
+        vibe.style.border = '4px solid rgba(205,89,140,0)'
+        choice = 'love'
+    })
+
+    career.addEventListener('click', function() {
+        career.style.border = '4px solid rgb(205,89,140)'
+        love.style.border = '4px solid rgba(205,89,140,0)'
+        vibe.style.border = '4px solid rgba(205,89,140,0)'
+        choice = 'career'
+    })
+
+    vibe.addEventListener('click', function() {
+        vibe.style.border = '4px solid rgb(205,89,140)'
+        career.style.border = '4px solid rgba(205,89,140,0)'
+        love.style.border = '4px solid rgba(205,89,140,0)'
+        choice = 'vibe'
+    })
 
 
 });
