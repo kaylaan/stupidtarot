@@ -9,6 +9,24 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+@font-face {
+    font-family: Body;
+    src: url(body-font/Barriecito-Regular.ttf);
+}
+
+@font-face {
+    font-family: Title;
+    src: url(title-font/CrayonAndTheWolf.otf);
+}
+
+#title {
+    font-family: "Title";
+}
+
+body {
+    font-family: "Body";
+}
+
 #intro {
     text-align: center;
 }
