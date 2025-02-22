@@ -32,18 +32,18 @@ body, html {
 }
 
 #enterButton {
-    font-family: "Body";
     color: rgb(70,70,70);
     font-size: 22px;
-    border-radius: 10px;
     background-color: rgb(222,222,222);
 }
 
 button {
+    font-family: "Body";
     border: none; 
-    background-color: #fff;
+    /* background-color: #fff; */
     padding: 11px 22px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 #mainContent {
