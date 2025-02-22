@@ -9,5 +9,26 @@
     <body>
         <img id="table"  src="images/Table.png">
         <img id="reader" src="images/Quiet.gif"> 
+        
+        <div id="nameQuestion">
+            <h1>What's your name?</h1>
+            <input type="text" id="name" name="name">
+            <button id="nextButton">Next</button>
+        </div>
+    
+        <!-- Category Selection Page -->
+        <div id="category" style="display: none;">
+            <h1>Pick a category</h1>
+            <div id="choices">
+                <button id="love">Love</button>
+                <button id="career">Career</button>
+                <button id="vibe">Vibe</button>
+            </div>
+        </div>
+        
+    
+        <!-- Include the reading.js file -->
+        <script src="reading.js"></script>
+    
     </body>
 </html>
