@@ -19,12 +19,9 @@ body, html {
     src: url(title-font/CrayonAndTheWolf.otf);
 }
 
-#title {
-    font-family: "Title";
-}
-
 body {
     font-family: "Body";
+    color: rgb(70,70,70);
 }
 
 #intro {
@@ -32,14 +29,20 @@ body {
 }
 
 #typewriter {
-    font-size: 24px;
+    font-size: 77px;
     margin-bottom: 20px;
+    font-family: "Title";
+    color: rgb(205,89,140); /*PINK!!!!!!*/
 }
 
 #enterButton {
-    padding: 10px 20px;
-    font-size: 16px;
+    font-family: "Body";
+    color: rgb(70,70,70);
+    padding: 11px 22px;
+    font-size: 22px;
     cursor: pointer;
+    border: none;
+    border-radius: 10px;
 }
 
 #mainContent {
