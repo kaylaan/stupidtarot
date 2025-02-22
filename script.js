@@ -11,22 +11,14 @@ let name = document.querySelector('#name')
 let categoryHeading = document.querySelector('#categoryHeading');
 let choose = document.querySelector('#choose');
 let body = document.querySelector('body')
+let speech = document.querySelector('#speech')
+
 let love = document.querySelector('#love')
 let career = document.querySelector('#career')
 let vibe = document.querySelector('#vibe')
+
+let cards = ["images/cards/blackout.png", "images/cards/blackout.png", "images/cards/blackout.png"];
 let cardContainer = document.getElementById('cardContainer');
-
-//js variables 
-let title = '#STUPiDTAROT';
-let user = ''
-let choice;
-let index = 0;
-
-let cards = ["images/cards/back.png", 
-            "images/cards/blackout.png", 
-            "images/cards/blackout.png"];
-
-let cardReading = []
 
 let nouns = ['person who blacks out after 2 drinks', 'person who wins arguments',
     'divorced parent of 2', 'brainrotter', 'they def want u back', 'professional gaslighter',
@@ -81,6 +73,7 @@ nextButton2.addEventListener('click', function () {
     choose.style.display = 'block';
     name.value = '';
     body.style.display = 'block';
+    let cardReading = [];
 
     for (i=0; i < 18; i++) {
         let newCard = document.createElement('img');
@@ -92,11 +85,26 @@ nextButton2.addEventListener('click', function () {
         newCard.addEventListener('click', flip)
 
         function flip() {
-            let randNum = parseInt
+            let randNum = parseInt(Math.random()*cards.length)
+            let chosen = cards[randNum]
+            newCard.src = chosen;
+            cardReading.push(chosen)
+            cards.splice(randNum, 1);
         }
+
+        // if (cardReading.length == 3) {
+        //     console.log('here')
+        // }
+    }
+
+    if (choice == 'love') {
+        let randNum =
+        speech.innerHTML = ''
     }
 
 });
+
+
 
 love.addEventListener('click', function () {
     love.style.border = '4px solid rgb(205,89,140)'
