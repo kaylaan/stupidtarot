@@ -1,16 +1,13 @@
+//html elements
 let typewriterElement = document.getElementById('typewriter');
 let enterButton = document.getElementById('enterButton');
 let nameQ = document.getElementById('nameQuestion');
 let intro = document.getElementById('intro');
 // let cards = document.querySelector('#cards');
 let category = document.querySelector('#category');
-let title = '#STUPiDTAROT';
 let nextButton = document.getElementById('nextButton');
 let nextButton2 = document.getElementById('nextButton2');
 let name = document.querySelector('#name')
-let user = ''
-let choice;
-let index = 0;
 let categoryHeading = document.querySelector('#categoryHeading');
 let choose = document.querySelector('#choose');
 let body = document.querySelector('body')
@@ -43,6 +40,24 @@ let loveNo = [
 
 ]
 let cardContainer = document.getElementById('cardContainer');
+
+let nouns = ['person who blacks out after 2 drinks', 'person who wins arguments',
+    'divorced parent of 2', 'brainrotter', 'they def want u back', 'professional gaslighter',
+    'nepo baby', 'Yaoi', 'close friends story', 'homo-erotic bestfriend', 'pregnant person',
+    'eye-contactship', 'DIVA <3', 'irritable bowel syndrome haver', 'person cancelled on twitter',
+    'person who wears wigs', 'white girl pumpkin spice latte', 'cards that are telling you to join my live! im live rn!!'];
+
+let adjectives = ['blackout drunk', 'argument winner-ery', 'divorced', 'brainrotted',
+    'they want u back SOO bad', 'gaslighter-y', 'nepo baby-ish', 'Yaoified', 'close friends story material',
+    'homo-erotically friendly', 'pregnant', 'eye-contact-situationship-ly', 'DIVA <3', 
+    'irritable bowel syndrome-ish', 'cancelled on twitter core xd', 'person who wears wigs core',
+    'white-girl-pumpkin-spice-latte-core', "qu'est-ce que... cards that are telling u to join my live rn-esque"];
+
+let verbs = ['getting blackout drunk 2nite', 'winning arguments', 'marrying and then divorcing everyone u talk to',
+    'brainrotting',  'they want u back for sure', 'gaslighting', 'becoming a nepo baby', 'Yaoi-ing', 'posting to ur close friends story',
+    'building a homo-erotic friendship', 'getting pregnant', 'eye-contact-situation-shipping', 'DIVA-ING <3',
+    'having irritable bowel syndrome', 'getting cancelled on twitter', 'thinking about when u will wear wigs',
+    'white girl pumpkin spice latte-ing', 'being like cards r telling u to join my live rn!! im live rn!!!'];
 
 // Function to create typewriter effect
 function typeWriter() {
