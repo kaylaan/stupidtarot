@@ -37,6 +37,11 @@ body, html {
     color: rgb(70,70,70);
     font-size: 22px;
     background-color: rgb(222,222,222);
+    margin-top: 50px;
+}
+#enterButton:hover {
+    color: rgb(222,222,222);
+    background-color: rgb(77,77,77);
 }
 
 button {
