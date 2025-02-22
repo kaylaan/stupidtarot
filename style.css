@@ -8,6 +8,8 @@ body, html {
     align-items: center;
     font-family: "Body";
     color: rgb(70,70,70);
+
+    background-image: url(images/bg.jpg);
 }
 
 @font-face {
