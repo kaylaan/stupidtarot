@@ -53,7 +53,7 @@ button {
     border-radius: 10px;
 }
 
-#name {
+#nameQ, #category {
     text-align: center;
 }
 

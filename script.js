@@ -36,6 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
     nextButton.addEventListener('click', function() {
         console.log(name.value);
         user = name.value;
+        nameQ.style.display = 'none';
+        category.style.display = 'block';
     });
 
 
