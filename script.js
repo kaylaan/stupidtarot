@@ -19,8 +19,29 @@ let speech = document.querySelector('#speech')
 let love = document.querySelector('#love')
 let career = document.querySelector('#career')
 let vibe = document.querySelector('#vibe')
+let noun;
+let verb;
+let adjective;
 
-let cards = ["images/cards/blackout.png", "images/cards/blackout.png", "images/cards/blackout.png"];
+let cards = ["images/cards/blackoutdrunk.png", "images/cards/blackoutdrunk.png", "images/cards/blackoutdrunk.png"];
+let loveYes = [
+    "Hmmm, so you’re thinking about someone…",
+    "I can tell you now that…",
+    "Yes! They are in love with you.",
+    `Spirit is telling me that you’re the best ${noun} they’ve ever met. This may be a twin flame connection!`,
+    `I’m sensing that the last time they saw you they thought you looked very ${adjective}`,
+    `The cards are saying that you will see them within the next 48 hours to start ${verb} together.`
+]
+
+let loveNo = [
+    "Hmmm, so you’re thinking about someone…",
+    "I can tell you now that…",
+    "No..... they are not in love with you.",
+    `Spirit is telling me that you’re the best ${noun} they’ve ever met. This may be a twin flame connection!`,
+    `I’m sensing that the last time they saw you they thought you looked very ${adjective}`,
+    `The cards are saying that you will see them within the next 48 hours to start ${verb} together.`
+
+]
 let cardContainer = document.getElementById('cardContainer');
 
 // Function to create typewriter effect
@@ -75,16 +96,31 @@ nextButton2.addEventListener('click', function () {
             newCard.src = chosen;
             cardReading.push(chosen)
             cards.splice(randNum, 1);
+
+            if (cardReading.length == 3) {
+                noun = 'hello'
+                verb='hi'
+                adjective = 'ok'
+
+                if (choice == 'love') {
+                    let randNum = Math.floor(Math.random()*2)
+                    if (randNum == 0) {
+                        for (i=0; i<loveYes.length; i++) {
+                            speech.innerHTML += loveYes[i]
+                            // setTimeout(beginReading, 7000)
+                        }
+                    } else {
+                        for (i=0; i<loveNo.length; i++) {
+                            speech.innerHTML += loveNo[i]
+                            // setTimeout(beginReading, 7000)
+                        }
+                    }
+                }
+                
+            }
         }
 
-        // if (cardReading.length == 3) {
-        //     console.log('here')
-        // }
-    }
-
-    if (choice == 'love') {
-        let randNum =
-        speech.innerHTML = ''
+        
     }
 
 });
