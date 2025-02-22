@@ -51,3 +51,17 @@ button {
 #mainContent {
     text-align: center;
 }
+
+#table {
+    position: absolute; 
+    width: 100%;
+    bottom: -500px;
+    z-index: 1;
+}
+
+#reader {
+    position: absolute;
+    width: 70%;
+    z-index: 0; 
+    top: -75px;
+}
