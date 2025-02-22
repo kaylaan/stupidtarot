@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const button = document.getElementById('myButton');
     const typewriterElement = document.getElementById('typewriter');
+    const enterButton = document.getElementById('enterButton');
+    const mainContent = document.getElementById('mainContent');
+    const intro = document.getElementById('intro');
     const text = 'hellooooo';
     let index = 0;
 
@@ -16,7 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start the typewriter effect
     typeWriter();
 
-    // Add a click event listener to the button
+    // Add a click event listener to the enter button
+    enterButton.addEventListener('click', function() {
+        // Hide the intro page and show the main content
+        intro.style.display = 'none';
+        mainContent.style.display = 'block';
+    });
+
+    // Add a click event listener to the main button
+    const button = document.getElementById('myButton');
     button.addEventListener('click', function() {
         // Code to execute when the button is clicked
         button.innerText = 'Hello';
