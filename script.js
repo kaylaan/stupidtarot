@@ -1,12 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     const typewriterElement = document.getElementById('typewriter');
     const enterButton = document.getElementById('enterButton');
-    const mainContent = document.getElementById('mainContent');
+    const nameQ = document.getElementById('nameQuestion');
     const intro = document.getElementById('intro');
+<<<<<<< HEAD
+    const text = 'Whats ur name?';
+=======
     const text = '#STUPiDTAROT';
+    const nextButton = document.getElementById('nextButton');
+    let name = document.querySelector('#name')
+    let user = '';
+>>>>>>> f7cf3fabcfbea6f9d250d86dcb4fee1841efdb54
     let index = 0;
 
-    // Function to create typewriter effect
     function typeWriter() {
         if (index < text.length) {
             typewriterElement.innerHTML += text.charAt(index);
@@ -15,21 +21,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Start the typewriter effect
     typeWriter();
 
-    // Add a click event listener to the enter button
     enterButton.addEventListener('click', function() {
-        // Hide the intro page and show the main content
         intro.style.display = 'none';
-        mainContent.style.display = 'block';
+        nameQ.style.display = 'block';
     });
 
     // Add a click event listener to the main button
-    const button = document.getElementById('myButton');
-    button.addEventListener('click', function() {
-        // Code to execute when the button is clicked
-        button.innerText = 'Hello';
-        button.style.backgroundColor = 'blue';
+    
+    nextButton.addEventListener('click', function() {
+        console.log(name.value);
+        user = name.value;
     });
 });
