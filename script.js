@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let user = ''
     let choice;
     let index = 0;
+    let categoryHeading = document.querySelector('#categoryHeading');
 
     let love = document.querySelector('#love')
     let career = document.querySelector('#career')
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Hide the intro page and show the main content
         intro.style.display = 'none';
         nameQ.style.display = 'block';
+        name.value = '';
     });
 
     // Add a click event listener to the main button
@@ -43,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name.style.display = 'none';
         nameQ.style.display = 'none';
         category.style.display = 'block';
+        categoryHeading.textContent = 'Hi ' + user + '. What do u need guidance on?' 
     });
 
     love.addEventListener('click', function() {
