@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const enterButton = document.getElementById('enterButton');
     const mainContent = document.getElementById('mainContent');
     const intro = document.getElementById('intro');
-    const text = 'hellooooo';
+    const text = '#STUPiDTAROT';
     let index = 0;
 
     // Function to create typewriter effect
