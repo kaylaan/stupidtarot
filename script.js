@@ -19,20 +19,14 @@ let vibe = document.querySelector('#vibe')
 let noun;
 let verb;
 let adjective;
-let index=0;
+let index = 0;
 let user;
 let choice;
 let title = "#STUPiDTAROT"
 
-let cards = ["images/cards/blackoutdrunk.png", "images/cards/winningarguments.png", "images/cards/divorce.png", "images/cards/brainrot.png", "images/cards/theywantyou.png", "images/cards/gaslight.png", "images/cards/nepotism.png", "images/cards/yaoi.png", "images/cards/closefriendsstory.png", "images/cards/homoeroticfriendship.png", "images/cards/pregnant.png", "images/cards/eyecontactship.png",  "images/cards/diva.png",  "images/cards/ibs.png", "images/cards/cancelledontwitter.png", "images/cards/doyouwearwigs.png", "images/cards/whitegirlpumpkinspicelatte.png", "images/cards/joinmylive.png"];
+let cards = ["images/cards/blackoutdrunk.png", "images/cards/winningarguments.png", "images/cards/divorce.png", "images/cards/brainrot.png", "images/cards/theywantyou.png", "images/cards/gaslight.png", "images/cards/nepotism.png", "images/cards/yaoi.png", "images/cards/closefriendsstory.png", "images/cards/homoeroticfriendship.png", "images/cards/pregnant.png", "images/cards/eyecontactship.png", "images/cards/diva.png", "images/cards/ibs.png", "images/cards/cancelledontwitter.png", "images/cards/doyouwearwigs.png", "images/cards/whitegirlpumpkinspicelatte.png", "images/cards/joinmylive.png"];
 
 let cardContainer = document.getElementById('cardContainer');
-
-let careerReading = [
-    "Oh, a very strong message is coming through… you’re a corporate freak! \n",
-    "There’s lots of [ADJECTIVE] energy coming in right now… ",
-    `If you make time in your daily routine to mindfully start ${verb} for at least 30 minutes`
-]
 
 let nouns = ['person who blacks out after 2 drinks', 'person who wins arguments',
     'divorced parent of 2', 'brainrotter', 'they def want u back', 'professional gaslighter',
@@ -42,12 +36,12 @@ let nouns = ['person who blacks out after 2 drinks', 'person who wins arguments'
 
 let adjectives = ['blackout drunk', 'argument winner-ery', 'divorced', 'brainrotted',
     'they want u back SOO bad', 'gaslighter-y', 'nepo baby-ish', 'Yaoified', 'close friends story material',
-    'homo-erotically friendly', 'pregnant', 'eye-contact-situationship-ly', 'DIVA <3', 
+    'homo-erotically friendly', 'pregnant', 'eye-contact-situationship-ly', 'DIVA <3',
     'irritable bowel syndrome-ish', 'cancelled on twitter core xd', 'person who wears wigs core',
     'white-girl-pumpkin-spice-latte-core', "qu'est-ce que... cards that are telling u to join my live rn-esque"];
 
 let verbs = ['getting blackout drunk 2nite', 'winning arguments', 'marrying and then divorcing everyone u talk to',
-    'brainrotting',  'they want u back for sure', 'gaslighting', 'becoming a nepo baby', 'Yaoi-ing', 'posting to ur close friends story',
+    'brainrotting', 'they want u back for sure', 'gaslighting', 'becoming a nepo baby', 'Yaoi-ing', 'posting to ur close friends story',
     'building a homo-erotic friendship', 'getting pregnant', 'eye-contact-situation-shipping', 'DIVA-ING <3',
     'having irritable bowel syndrome', 'getting cancelled on twitter', 'thinking about when u will wear wigs',
     'white girl pumpkin spice latte-ing', 'being like cards r telling u to join my live rn!! im live rn!!!'];
@@ -91,7 +85,7 @@ nextButton2.addEventListener('click', function () {
 
     let numbers = []
 
-    for (i=0; i < 18; i++) {
+    for (i = 0; i < 18; i++) {
         let newCard = document.createElement('img');
         newCard.src = 'images/cards/back.png';
         newCard.style.width = "90px"
@@ -101,9 +95,9 @@ nextButton2.addEventListener('click', function () {
         newCard.addEventListener('click', flip)
 
         function flip() {
-            let randNum = parseInt(Math.random()*cards.length)
+            let randNum = parseInt(Math.random() * cards.length)
             let chosen = cards[randNum]
-            
+
             newCard.src = chosen;
             cardReading.push(chosen)
             numbers.push(randNum)
@@ -128,38 +122,66 @@ nextButton2.addEventListener('click', function () {
                     `I’m sensing that the last time they saw you they thought you looked very ${adjective}`,
                     `The cards are saying that you will see them within the next 48 hours to start ${verb} together.`
                 ]
-                
+
                 let loveNo = [
-                    "Hmmm, so you’re thinking about someone… \n",
+                    "Hmmm, so you’re thinking about someone…",
                     "I can tell you now that…",
                     "No..... they are not in love with you.",
-                    `Spirit is telling me that you’re the best ${noun} they’ve ever met. This may be a twin flame connection!`,
+                    `Spirit is telling me that you’re the worst ${noun} they’ve ever met. This may be a twin flame connection!`,
                     `I’m sensing that the last time they saw you they thought you looked very ${adjective}`,
                     `The cards are saying that you will see them within the next 48 hours to start ${verb} together.`
-                
+
+                ]
+
+                let careerReading = [
+                    "Oh, a very strong message is coming through… you’re a corporate freak!\n",
+                    `There’s lots of ${adjective} energy scoming in right now… `,
+                    `the universe is telling me that you would excel in a career as a/an ${noun}. They’re not hiring though.`,
+                        `If you make time in your daily routine to mindfully start ${verb} for at least 30 minutes`,
+                    "this practice will invite financial prosperity into your life. Or not idk. Subscribe to my patreon pls."
+                ]
+
+                let auraReading = [
+                    "Ur aura stinks! Good thing I can't smell. I am a gif.",
+                    `You have very strong energy of someone who is ${verb},`,
+                    `You must be very in tune with your ${adjective} side.`,
+                    `Just trust your intuition and embody the traits of your Rising sign: a ${noun}.`
                 ]
 
                 if (choice == 'love') {
-                    let randNum = Math.floor(Math.random()*2)
+                    let randNum = Math.floor(Math.random() * 2)
                     if (randNum == 0) {
-                        for (i=0; i<loveYes.length; i++) {
+                        for (i = 0; i < loveYes.length; i++) {
                             speech.innerHTML += loveYes[i]
                             // setTimeout(beginReading, 7000)
                         }
                     } else {
-                        for (i=0; i<loveNo.length; i++) {
+                        for (i = 0; i < loveNo.length; i++) {
                             speech.innerHTML += loveNo[i]
                             // setTimeout(beginReading, 7000)
                         }
                     }
+                
+
+                } else if (choice == 'career') {
+                    // beginReading()
+                    // function beginReading() {
+                    for (i = 0; i < careerReading.length; i++) {
+                        speech.innerHTML += careerReading[i]
+                        // setTimeout(beginReading, 7000)
+                    }
+                } else if (choice == 'vibe') {
+                    for (i = 0; i < auraReading.length; i++) {
+                        speech.innerHTML += auraReading[i]
+                        // setTimeout(beginReading, 7000)
+                    }
                 }
+
                 
             }
         }
 
-        
     }
-
 });
 
 
