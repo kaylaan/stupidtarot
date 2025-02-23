@@ -11,7 +11,7 @@ body, html {
     color: rgb(70,70,70);
 
     background-image: url(images/bg.jpg);
-    /* overflow: hidden;  */
+    overflow: hidden; 
 }
 
 @font-face {
@@ -96,7 +96,17 @@ img.category {
     margin: auto;
     padding: auto;
     position: absolute;
+    bottom: 0px;
     z-index: 10;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
+
+#speech {
+    position: absolute;
+    right: 0px;
+    width: 40%;
+    text-wrap: balance; 
+    z-index: 101;
+}
+
