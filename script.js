@@ -104,7 +104,8 @@ nextButton2.addEventListener('click', function () {
             newCard.src = chosen;
             cardReading.push(chosen)
             numbers.push(randNum)
-            cards.splice(randNum, 1);
+            // cards.splice(randNum, 1);
+            
 
             if (cardReading.length == 3) {
 
