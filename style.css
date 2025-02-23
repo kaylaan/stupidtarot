@@ -108,5 +108,15 @@ img.category {
     width: 40%;
     text-wrap: balance; 
     z-index: 101;
+    font-size: 28px;
+    margin-right: 22px;
+    margin-top: 22px;
+}
+
+#restart {
+    position: absolute;
+    margin-left: 22px;
+    margin-top: 22px;
+    z-index: 222;
 }
 

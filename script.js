@@ -12,6 +12,7 @@ let categoryHeading = document.querySelector('#categoryHeading');
 let choose = document.querySelector('#choose');
 let body = document.querySelector('body')
 let speech = document.querySelector('#speech')
+let restart = document.querySelector('#restart')
 
 let love = document.querySelector('#love')
 let career = document.querySelector('#career')
@@ -75,6 +76,7 @@ nextButton.addEventListener('click', function () {
     categoryHeading.textContent = 'Hi ' + user + '. What do u need guidance on?'
 });
 
+
 nextButton2.addEventListener('click', function () {
     // Hide the intro page and show the main content
     category.style.display = 'none';
@@ -117,36 +119,36 @@ nextButton2.addEventListener('click', function () {
 
                 let loveYes = [
                     "Hmmm, so you’re thinking about someone…",
-                    "I can tell you now that…",
-                    "Yes! They are in love with you.",
-                    `Spirit is telling me that you’re the best ${noun} they’ve ever met. This may be a twin flame connection!`,
-                    `I’m sensing that the last time they saw you they thought you looked very ${adjective}`,
-                    `The cards are saying that you will see them within the next 48 hours to start ${verb} together.`
+                    " I can tell you now that…",
+                    " Yes! They are in love with you.",
+                    ` Spirit is telling me that you’re the best <span style='color:rgb(205,89,140);'>${noun}</span> they’ve ever met. This may be a twin flame connection!`,
+                    ` I’m sensing that the last time they saw you they thought you looked very <span style='color:rgb(205,89,140);'>${adjective}</span>`,
+                    ` The cards are saying that you will see them within the next 48 hours to start <span style='color:rgb(205,89,140);'>${verb}</span> together.`
                 ]
 
                 let loveNo = [
                     "Hmmm, so you’re thinking about someone…",
-                    "I can tell you now that…",
-                    "No..... they are not in love with you.",
-                    `Spirit is telling me that you’re the worst ${noun} they’ve ever met. This may be a twin flame connection!`,
-                    `I’m sensing that the last time they saw you they thought you looked very ${adjective}`,
-                    `The cards are saying that you will see them within the next 48 hours to start ${verb} together.`
+                    " I can tell you now that…",
+                    " No..... they are not in love with you.",
+                    ` Spirit is telling me that you’re the worst <span style='color:rgb(205,89,140);'>${noun}</span> they’ve ever met. This may be a twin flame connection!`,
+                    ` I’m sensing that the last time they saw you they thought you looked very <span style='color:rgb(205,89,140);'>${adjective}</span>`,
+                    ` The cards are saying that you will see them within the next 48 hours to start <span style='color:rgb(205,89,140);'>${verb}</span> together.`
 
                 ]
 
                 let careerReading = [
                     "Oh, a very strong message is coming through… you’re a corporate freak!\n",
-                    `There’s lots of ${adjective} energy scoming in right now… `,
-                    `the universe is telling me that you would excel in a career as a/an ${noun}. They’re not hiring though.`,
-                        `If you make time in your daily routine to mindfully start ${verb} for at least 30 minutes`,
-                    "this practice will invite financial prosperity into your life. Or not idk. Subscribe to my patreon pls."
+                    ` There’s lots of <span style='color:rgb(205,89,140);'>${adjective}</span> energy scoming in right now… \n`,
+                    ` the universe is telling me that you would excel in a career as a/an <span style='color:rgb(205,89,140);'>${noun}</span>. They’re not hiring though.\n`,
+                    ` If you make time in your daily routine to mindfully start <span style='color:rgb(205,89,140);'>${verb}</span> for at least 30 minutes\n`,
+                    " this practice will invite financial prosperity into your life. Or not idk. Subscribe to my patreon pls.\n"
                 ]
 
                 let auraReading = [
-                    "Ur aura stinks! Good thing I can't smell. I am a gif.",
-                    `You have very strong energy of someone who is ${verb},`,
-                    `You must be very in tune with your ${adjective} side.`,
-                    `Just trust your intuition and embody the traits of your Rising sign: a ${noun}.`
+                    " Ur aura stinks! Good thing I can't smell. I am a gif.",
+                    ` You have very strong energy of someone who is <span style='color:rgb(205,89,140);'>${verb},</span>`,
+                    ` You must be very in tune with your <span style='color:rgb(205,89,140);'>${adjective}</span> side.`,
+                    ` Just trust your intuition and embody the traits of your Rising sign: a <span style='color:rgb(205,89,140);'>${noun}</span>.`
                 ]
 
                 if (choice == 'love') {
@@ -185,6 +187,9 @@ nextButton2.addEventListener('click', function () {
     }
 });
 
+restart.addEventListener('click', function(){
+    location.reload();
+})
 
 
 love.addEventListener('click', function () {
