@@ -25,6 +25,9 @@ let choice;
 let title = "#STUPiDTAROT"
 
 let cards = ["images/cards/blackoutdrunk.png", "images/cards/winningarguments.png", "images/cards/divorce.png", "images/cards/brainrot.png", "images/cards/theywantyou.png", "images/cards/gaslight.png", "images/cards/nepotism.png", "images/cards/yaoi.png", "images/cards/closefriendsstory.png", "images/cards/homoeroticfriendship.png", "images/cards/pregnant.png", "images/cards/eyecontactship.png",  "images/cards/diva.png",  "images/cards/ibs.png", "images/cards/cancelledontwitter.png", "images/cards/doyouwearwigs.png", "images/cards/whitegirlpumpkinspicelatte.png", "images/cards/joinmylive.png"];
+
+let cardContainer = document.getElementById('cardContainer');
+
 let loveYes = [
     "Hmmm, so you’re thinking about someone…",
     "I can tell you now that…",
@@ -35,7 +38,7 @@ let loveYes = [
 ]
 
 let loveNo = [
-    "Hmmm, so you’re thinking about someone…",
+    "Hmmm, so you’re thinking about someone… \n",
     "I can tell you now that…",
     "No..... they are not in love with you.",
     `Spirit is telling me that you’re the best ${noun} they’ve ever met. This may be a twin flame connection!`,
@@ -43,7 +46,12 @@ let loveNo = [
     `The cards are saying that you will see them within the next 48 hours to start ${verb} together.`
 
 ]
-let cardContainer = document.getElementById('cardContainer');
+
+let careerReading = [
+    "Oh, a very strong message is coming through… you’re a corporate freak! \n",
+    "There’s lots of [ADJECTIVE] energy coming in right now… ",
+    `If you make time in your daily routine to mindfully start ${verb} for at least 30 minutes`
+]
 
 let nouns = ['person who blacks out after 2 drinks', 'person who wins arguments',
     'divorced parent of 2', 'brainrotter', 'they def want u back', 'professional gaslighter',
@@ -117,9 +125,23 @@ nextButton2.addEventListener('click', function () {
             cards.splice(randNum, 1);
 
             if (cardReading.length == 3) {
-                noun = 'hello'
-                verb='hi'
-                adjective = 'ok'
+
+                console.log(cardReading)
+                let card1 = cardReading[0]
+                let card2 = cardReading[1]
+                let card3 = cardReading[2]
+
+                console.log(card1, card2, card3)
+                console.log(cards.indexOf(card1))
+                console.log(cards.indexOf(card2))
+                console.log(cards.indexOf(card3))
+
+                noun = nouns[cards.indexOf(card1)]
+
+                verb = verbs[cards.indexOf(card2)]
+                adjective = adjectives[cards.indexOf(card3)]
+
+                console.log(noun, verb, adjective)
 
                 if (choice == 'love') {
                     let randNum = Math.floor(Math.random()*2)
