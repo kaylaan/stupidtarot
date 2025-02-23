@@ -96,6 +96,7 @@ nextButton2.addEventListener('click', function () {
         newCard.src = 'images/cards/back.png';
         newCard.style.width = "90px"
         newCard.style.margin = "5px"
+        newCard.classList.add('card');
         cardContainer.appendChild(newCard);
 
         newCard.addEventListener('click', flip)
