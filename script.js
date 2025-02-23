@@ -24,7 +24,7 @@ let user;
 let choice;
 let title = "#STUPiDTAROT"
 
-let cards = ["images/cards/blackoutdrunk.png", "images/cards/blackoutdrunk.png", "images/cards/blackoutdrunk.png"];
+let cards = ["images/cards/blackoutdrunk.png", "images/cards/winningarguments.png", "images/cards/divorce.png", "images/cards/brainrot.png", "images/cards/theywantyou.png", "images/cards/gaslight.png", "images/cards/nepotism.png", "images/cards/yaoi.png", "images/cards/closefriendsstory.png", "images/cards/homoeroticfriendship.png", "images/cards/pregnant.png", "images/cards/eyecontactship.png",  "images/cards/diva.png",  "images/cards/ibs.png", "images/cards/cancelledontwitter.png", "images/cards/doyouwearwigs.png", "images/cards/whitegirlpumpkinspicelatte.png", "images/cards/joinmylive.png"];
 let loveYes = [
     "Hmmm, so you’re thinking about someone…",
     "I can tell you now that…",
