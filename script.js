@@ -28,25 +28,6 @@ let cards = ["images/cards/blackoutdrunk.png", "images/cards/winningarguments.pn
 
 let cardContainer = document.getElementById('cardContainer');
 
-let loveYes = [
-    "Hmmm, so you’re thinking about someone…",
-    "I can tell you now that…",
-    "Yes! They are in love with you.",
-    `Spirit is telling me that you’re the best ${noun} they’ve ever met. This may be a twin flame connection!`,
-    `I’m sensing that the last time they saw you they thought you looked very ${adjective}`,
-    `The cards are saying that you will see them within the next 48 hours to start ${verb} together.`
-]
-
-let loveNo = [
-    "Hmmm, so you’re thinking about someone… \n",
-    "I can tell you now that…",
-    "No..... they are not in love with you.",
-    `Spirit is telling me that you’re the best ${noun} they’ve ever met. This may be a twin flame connection!`,
-    `I’m sensing that the last time they saw you they thought you looked very ${adjective}`,
-    `The cards are saying that you will see them within the next 48 hours to start ${verb} together.`
-
-]
-
 let careerReading = [
     "Oh, a very strong message is coming through… you’re a corporate freak! \n",
     "There’s lots of [ADJECTIVE] energy coming in right now… ",
@@ -108,6 +89,8 @@ nextButton2.addEventListener('click', function () {
     body.style.display = 'block';
     let cardReading = [];
 
+    let numbers = []
+
     for (i=0; i < 18; i++) {
         let newCard = document.createElement('img');
         newCard.src = 'images/cards/back.png';
@@ -120,28 +103,41 @@ nextButton2.addEventListener('click', function () {
         function flip() {
             let randNum = parseInt(Math.random()*cards.length)
             let chosen = cards[randNum]
+            
             newCard.src = chosen;
             cardReading.push(chosen)
+            numbers.push(randNum)
             cards.splice(randNum, 1);
 
             if (cardReading.length == 3) {
 
-                console.log(cardReading)
-                let card1 = cardReading[0]
-                let card2 = cardReading[1]
-                let card3 = cardReading[2]
+                console.log(numbers)
 
-                console.log(card1, card2, card3)
-                console.log(cards.indexOf(card1))
-                console.log(cards.indexOf(card2))
-                console.log(cards.indexOf(card3))
+                noun = nouns[numbers[0]]
 
-                noun = nouns[cards.indexOf(card1)]
-
-                verb = verbs[cards.indexOf(card2)]
-                adjective = adjectives[cards.indexOf(card3)]
+                verb = verbs[numbers[1]]
+                adjective = adjectives[numbers[2]]
 
                 console.log(noun, verb, adjective)
+
+                let loveYes = [
+                    "Hmmm, so you’re thinking about someone…",
+                    "I can tell you now that…",
+                    "Yes! They are in love with you.",
+                    `Spirit is telling me that you’re the best ${noun} they’ve ever met. This may be a twin flame connection!`,
+                    `I’m sensing that the last time they saw you they thought you looked very ${adjective}`,
+                    `The cards are saying that you will see them within the next 48 hours to start ${verb} together.`
+                ]
+                
+                let loveNo = [
+                    "Hmmm, so you’re thinking about someone… \n",
+                    "I can tell you now that…",
+                    "No..... they are not in love with you.",
+                    `Spirit is telling me that you’re the best ${noun} they’ve ever met. This may be a twin flame connection!`,
+                    `I’m sensing that the last time they saw you they thought you looked very ${adjective}`,
+                    `The cards are saying that you will see them within the next 48 hours to start ${verb} together.`
+                
+                ]
 
                 if (choice == 'love') {
                     let randNum = Math.floor(Math.random()*2)
